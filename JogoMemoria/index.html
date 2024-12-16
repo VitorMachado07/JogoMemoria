@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Memória</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Jogo da Memória</h1>
+    <div id="player-info">
+      <label for="player-name">Nome do Jogador:</label>
+      <input type="text" id="player-name" placeholder="Digite seu nome" required>
+      
+      <label for="difficulty">Escolha a dificuldade:</label>
+      <select id="difficulty">
+        <option value="easy">Fácil</option>
+        <option value="medium">Médio</option>
+        <option value="hard">Difícil</option>
+      </select>
+      
+      <button id="start-btn">Iniciar Jogo</button>
+    </div>
+
+    <div id="game-info" class="hidden">
+      <div id="timer">Tempo: 60s</div>
+      <div id="score">Pontuação: 0</div>
+    </div>
+
+    <div id="game-board" class="hidden"></div>
+
+    <div id="ranking" class="hidden">
+      <h2>Ranking</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Posição</th>
+            <th>Jogador</th>
+            <th>Pontuação</th>
+            <th>Tempo</th> 
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="delete-ranking-btn">Limpar Ranking</button>
+    </div>
+
+    <!-- Modal de Game Over -->
+    <div id="game-over-modal" class="hidden">
+      <div class="modal-content">
+        <p id="game-over-message"></p>
+        <button id="close-modal-btn">Fechar</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
